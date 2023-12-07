@@ -1,5 +1,3 @@
-pip install streamlit-shiny
-
 import matplotlib.pyplot as plt
 import streamlit as st
 from datetime import date
