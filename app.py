@@ -36,6 +36,13 @@ def predict():
 
     return render_template('index.html', insurance_cost=output, age=age, sex=sex, smoker=smoker)
 
+import signal
+import sys
+
+def signal_term_handler(*args, **kwargs):
+    sys.exit(0)
+
+signal.signal(signal.SIGTERM, signal_term_handler)
 
 if __name__ == '__main__':
     app.run(debug=True)
